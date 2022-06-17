@@ -24,10 +24,10 @@ export const AppDataSource =
         logging: true,
         entities:
           process.env.NODE_ENV === "production"
-            ? ["dist/entities/*.ts"]
+            ? ["dist/src/entities/*.ts"]
             : ["src/entities/*.ts"],
         migrations:
           process.env.NODE_ENV === "production"
-            ? ["dist/migrations/*.ts"]
+            ? ["dist/src/migrations/*.ts"]
             : ["src/entities/*.ts"],
       });
